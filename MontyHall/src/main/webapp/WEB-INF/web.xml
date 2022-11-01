@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>lab06</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>MontyServlet</display-name>
+    <servlet-name>MontyServlet</servlet-name>
+    <servlet-class>MontyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MontyServlet</servlet-name>
+    <url-pattern>/monty</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>MontyListener</listener-class>
+  </listener>
+  <filter>
+    <display-name>MontyFiltro</display-name>
+    <filter-name>MontyFiltro</filter-name>
+    <filter-class>MontyFiltro</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>MontyFiltro</filter-name>
+    <url-pattern>/monty</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DestroiMontyServlet</display-name>
+    <servlet-name>DestroiMontyServlet</servlet-name>
+    <servlet-class>DestroiMontyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DestroiMontyServlet</servlet-name>
+    <url-pattern>/destroi</url-pattern>
+  </servlet-mapping>
+</web-app>
