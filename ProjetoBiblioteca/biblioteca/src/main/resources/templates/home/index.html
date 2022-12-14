@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+<title>home</title>
+</head>
+<body>
+	<div class="container">
+		<div>
+			<div class="container-text">
+
+				<h2>
+					<i class="fa fa-book" style="font-size: 24px"></i> Bem vindo
+				</h2>
+			</div>
+		</div>
+
+		<div>
+			<p>
+			<form class="form" role="search" action="/home" method="Post">
+				<input th:name="id" type="number"
+					placeholder="Pesquisar livro por id" />
+				<button class="buttonSearch" type="submit">
+					<i class="fa fa-search" style="font-size: 16px"></i>
+				</button>
+			</form>
+		</div>
+		<div>
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">Nome</th>
+						<th scope="col">Autor</th>
+						<th scope="col">Ano</th>
+						<th scope="col">Status</th>
+						<th scope="col">Genero</th>
+					</tr>
+				</thead>
+
+
+				<tbody>
+					<tr th:each="livro : ${listaLivros}">
+						<th scope="row" th:text="${livro.nome}"></th>
+						<td th:text="${livro.autor}"></td>
+						<td th:text="${livro.ano}"></td>
+						<td th:text="${livro.status}"></td>
+						<td th:text="${livro.genero}"></td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr th:if="${livroId}">
+						<th scope="row" th:text="${livroId.nome}"></th>
+						<td th:text="${livroId.autor}"></td>
+						<td th:text="${livroId.ano}"></td>
+						<td th:text="${livroId.status}"></td>
+						<td th:text="${livroId.genero}"></td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr th:each="emprestimo : ${listaEmprestimo}">
+						<th scope="row" th:text="${emprestimo.status}"></th>
+						<td th:text="${emprestimo.livro_id}"></td>
+						<td th:text="${emprestimo.usuario_id}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+
+</body>
+</html>

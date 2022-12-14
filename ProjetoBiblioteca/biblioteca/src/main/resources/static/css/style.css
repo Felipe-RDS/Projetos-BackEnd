@@ -1,0 +1,82 @@
+.container {
+	border: 1px solid #C0C0C0;
+	border-radius: 4px;
+	font: 16px system-ui;
+	background-color: #f1f1f1;
+	width: 90vw;
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	padding: 10px;
+}
+
+form {
+	width: 300px;
+	height: 44px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: row;
+	align-items: start;
+}
+
+input {
+	all: unset;
+	font: 16px system-ui;
+	padding: 4px;
+	border-radius: 4px;
+	margin-right: 4px;
+	background-color: #e4e4e4;
+	border: 1px solid #C0C0C0;
+	display: flex;
+	flex-direction: row;
+	align-items: start;
+	justify-content: start;
+	width: 20vw;
+	height: 4vh;
+}
+
+.buttonSearch {
+	background: #e4e4e4;
+	color: #7b7b7b;
+	font-size: 20px;
+	border: 1px solid #C0C0C0;
+	cursor: pointer;
+	border-radius: 4px;
+	width: 5vw;
+	height: 5.4vh;
+}
+
+.button {
+	background: #ffffff;
+	color: black;
+	font-size: 16px;
+	border: 1px solid #C0C0C0;
+	cursor: pointer;
+	border-radius: 4px;
+	padding: 8px;
+	margin-top: 8px;
+	width: 20vw;
+	height: 5vh;
+}
+
+.container-text {
+	text-align: start;
+}
+
+.fa fa-search {
+	border: 1px solid #C0C0C0;
+	align-items: center;
+	justify-content: center;
+	background-color: #D3D3D3;
+}
+
+.fa fa-book {
+	margin: 20px;
+}
+
+::placeholder {
+	opacity: 0.9;
+}
